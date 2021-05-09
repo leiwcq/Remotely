@@ -146,9 +146,7 @@ jobs:
         $Minute = $VersionDate.Minute.ToString().PadLeft(2, "0")
         $CurrentVersion = "$Year.$Month.$Day.$Hour$Minute"
         
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-
-        echo "::set-env name=CurrentVersion::$CurrentVersion"
+        #echo "::set-env name=CurrentVersion::$CurrentVersion"
         # This was needed in Azure Pipelines.
         #[System.Console]::WriteLine("##vso[task.setvariable variable=CurrentVersion]$CurrentVersion")
 
